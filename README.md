@@ -2,9 +2,11 @@
 1. Can you implement the sing() method for the bird?
 
 public interface Animal {
+
 	public void walk();
 	public void fly();
 	public void sing();
+	
 }
 
 public class Bird implements Animal {
@@ -23,6 +25,7 @@ public class Bird implements Animal {
 }
 
 public class Solution {
+
 	public static void main(String[] args) { 
 		Bird bird = new Bird();
 		bird.walk();
@@ -54,6 +57,7 @@ b. A duck can swim
 
 //Normally, the common actions of animal should be able to walk, fly, sing and swim
 public interface Animal {
+
 	public void walk();
 	public void fly();
 	public void sing();
@@ -347,6 +351,7 @@ public class Clownfish extends Fish {
 
 public class Solution {
 	public static void main(String[] args) { 
+	
 		Shark shark = new Shark("large","grey",false,true);
 		System.out.println(shark.getSize());
 		System.out.println(shark.getColour());
@@ -433,6 +438,7 @@ d. how many of these animals can swim?
 
 //Add method isWalk/isFly/isSing/isSwim to define if the animal is able to walk/fly/sing/swim
 public interface Animal {
+
 	public void walk();
 	public void fly();
 	public void sing();
@@ -482,7 +488,9 @@ public class Bird implements Animal{
 
 //The testing method
 public class Solution {
+
 	public static void main(String[] args) {
+	
 		int walkCount = 0;
 		int flyCount = 0;
 		int singCount = 0;
@@ -574,7 +582,9 @@ public class Rooster extends Chicken {
 
 //Testing
 public class Solution {
+
 	public static void main(String[] args) {
+	
 		Rooster rooster = new Rooster();
 		System.out.println(rooster.secondLanguage("Finnish"));
 	}
