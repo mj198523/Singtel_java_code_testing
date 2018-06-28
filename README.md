@@ -35,10 +35,12 @@ public class Solution {
 }
 
 a. How did you unit test it ?
+
 First of all. we should define a valid and common Bird object. A Bird should be able to sing, walk and fly.
 Therefore when we create a Bird object and invoke the characters of it, we should get a Bird which is able to sing, walk and fly.
 
 b. How did you optimize the code for maintainability?
+
 Please refer to the code of Question 1. I think we should design the Animal as a interface which contains the common actions of an Animal.
 Then for each different animal, we should specify the details of the actions.
 
@@ -375,8 +377,11 @@ public class Solution {
 
 3. Dolphins are not exactly fish, yet, they are good swimmers 
 a. Can you model a dolphin that swims without inheriting from a fish class?
+
 I think i will still concider Java reflection, the code is similar like Question A-3-c.
+
 b. How do you avoid duplicating code or introducing unneeded overhead?
+
 I think there should be no duplicating code or introducing unneeded overhead if using my solution.
 
 
@@ -432,9 +437,9 @@ public class Caterpillar extends Butterfly {
 	
 	public void changeToButterfly() {
 		super.fly();
-		this.walk();
-		this.sing();
-		this.swim();
+		super.walk();
+		super.sing();
+		super.swim();
 	}
 }
 
@@ -607,7 +612,9 @@ public class Solution {
 2. Can you design a RESTful API for querying these animals ?
 
 Request : http://localhost:8080/testing/searchAnimals/?animal=bird
+
 Response : return one json oject.
+
 			{
 			 "walk":"I am working.",
 			 "sing":"I am singing,",
