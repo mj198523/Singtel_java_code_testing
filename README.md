@@ -56,6 +56,7 @@ public class Duck extends Bird {
 b. A duck can swim
 
 //Normally, the common actions of animal should be able to walk, fly, sing and swim
+
 public interface Animal {
 
 	public void walk();
@@ -65,6 +66,7 @@ public interface Animal {
 }
 
 //Normally, bird should be able to walk, fly, sing, but not swim
+
 public class Bird implements Animal{
 
 	public void walk() {
@@ -85,6 +87,7 @@ public class Bird implements Animal{
 }
 
 //For Duck, we specify the sing and swim action.
+
 public class Duck extends Bird {
 
 	public void sing() {
@@ -108,6 +111,7 @@ public class Chicken extends Bird {
 d. A chicken cannot fly
 
 //For Chicken, we specify the sing and fly action. The Bird class and Animal interface will use the same in question b.
+
 public class Chicken extends Bird {
 
 	public void sing() {
@@ -267,6 +271,7 @@ c. Clownfish make jokes
 d. Sharks eat other fish
 
 //Fish
+
 public class Fish implements Animal {
 	
 	public String size;
@@ -333,6 +338,7 @@ public class Fish implements Animal {
 }
 
 //Shark
+
 public class Shark extends Fish {
 
 	public Shark(String size, String colour, boolean isJoke, boolean eatOthers) {
@@ -341,6 +347,7 @@ public class Shark extends Fish {
 }
 
 //Clownfish
+
 public class Clownfish extends Fish {
 
 	public Clownfish(String size, String colour, boolean isJoke, boolean eatOthers) {
@@ -379,6 +386,7 @@ a. A butterfly can fly
 b. A butterfly does not make a sound 
 
 //Butterfly
+
 public class Butterfly implements Animal{
 
 	public void walk() {
@@ -403,6 +411,7 @@ a. A caterpillar cannot fly
 b. A caterpillar can walk (crawl) 
 
 //Caterpillar
+
 public class Caterpillar extends Butterfly {
 
 	public void walk() {
@@ -437,6 +446,7 @@ c. how many of these animals can sing?
 d. how many of these animals can swim? 
 
 //Add method isWalk/isFly/isSing/isSwim to define if the animal is able to walk/fly/sing/swim
+
 public interface Animal {
 
 	public void walk();
@@ -450,6 +460,7 @@ public interface Animal {
 }
 
 //Take bird as a sample, we implement the new method to know if Bird is able to walk/fly/sing/swim
+
 public class Bird implements Animal{
 
 	public void walk() {
@@ -487,6 +498,7 @@ public class Bird implements Animal{
 }
 
 //The testing method
+
 public class Solution {
 
 	public static void main(String[] args) {
@@ -530,6 +542,7 @@ If you still have time left, please consider the following:
 this is how the Rooster sounds differently depending on language. Please add the rooster sound in your native tongue.
 
 //Rooster
+
 public class Rooster extends Chicken {
 	
 	public enum Language {
@@ -581,6 +594,7 @@ public class Rooster extends Chicken {
 }
 
 //Testing
+
 public class Solution {
 
 	public static void main(String[] args) {
