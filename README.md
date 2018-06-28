@@ -1,5 +1,6 @@
 # Singtel_java_code_testing
 1. Can you implement the sing() method for the bird?
+
 public interface Animal {
 	public void walk();
 	public void fly();
@@ -41,6 +42,7 @@ Then for each different animal, we should specify the details of the actions.
 
 2. Now, we have 2 special kinds of birds: the Duck and the Chicken... Can you implement them to make their own special sound ?
 a. A duck says: “Quack, quack”
+
 public class Duck extends Bird {
 
 	public void sing() {
@@ -49,6 +51,7 @@ public class Duck extends Bird {
 }
 
 b. A duck can swim
+
 //Normally, the common actions of animal should be able to walk, fly, sing and swim
 public interface Animal {
 	public void walk();
@@ -90,6 +93,7 @@ public class Duck extends Bird {
 }
 
 c. A chicken says: “Cluck, cluck”
+
 public class Chicken extends Bird {
 
 	public void sing() {
@@ -98,6 +102,7 @@ public class Chicken extends Bird {
 }
 
 d. A chicken cannot fly
+
 //For Chicken, we specify the sing and fly action. The Bird class and Animal interface will use the same in question b.
 public class Chicken extends Bird {
 
@@ -112,6 +117,7 @@ public class Chicken extends Bird {
 
 3. Now how would you model a rooster?
 a. A rooster says: “Cock-a-doodle-doo”
+
 public class Rooster extends Chicken {
 
 	public void sing() {
@@ -124,6 +130,7 @@ Rooster is a kind of a chicken, then it should have the common behavior of chick
 
 c. Can you think of other ways to model a rooster without using inheritance?
 I think I will concider reflection.
+
 import java.lang.reflect.Method;
 
 public class Rooster {
@@ -153,6 +160,7 @@ public class Rooster {
 
 4. Can you model a parrot? We are specifically interested in three parrots, one that lived in a house with dogs one in a house with cats, the other lived on a farm next to the rooster. 
 a. A parrot living with dogs says: “Woof, woof”
+
 public class Dog implements Animal {
 
 	public void walk() {
@@ -182,6 +190,7 @@ public class Parrot extends Bird {
 }
 
 b. A parrot living with cats says: “Meow” 
+
 public class Cat implements Animal {
 
 	public void walk() {
@@ -210,6 +219,7 @@ public class Parrot extends Bird {
 }
 
 c. A parrot living near the rooster says: “Cock-a-doodle-doo”
+
 public class Parrot extends Bird {
 
 	public void sing() {
@@ -226,6 +236,7 @@ B. Model fish as well as other swimming animals.
 a. Fishes don’t sing 
 b. Fishes don’t walk 
 c. Fishes can swim
+
 public class Fish implements Animal {
 
 	public void walk() {
@@ -250,6 +261,7 @@ a. Sharks are large and grey
 b. Clownfish are small and colourful (orange) 
 c. Clownfish make jokes 
 d. Sharks eat other fish
+
 //Fish
 public class Fish implements Animal {
 	
@@ -360,6 +372,7 @@ D. Model animals that change their behaviour over time
 1. Can you model a butterfly? 
 a. A butterfly can fly
 b. A butterfly does not make a sound 
+
 //Butterfly
 public class Butterfly implements Animal{
 
@@ -383,6 +396,8 @@ public class Butterfly implements Animal{
 2. Can you optimize your model to account for the metamorphosis from caterpillar to butterfly? 
 a. A caterpillar cannot fly 
 b. A caterpillar can walk (crawl) 
+
+//Caterpillar
 public class Caterpillar extends Butterfly {
 
 	public void walk() {
@@ -415,6 +430,7 @@ a. how many of these animals can fly?
 b. how many of these animals can walk? 
 c. how many of these animals can sing? 
 d. how many of these animals can swim? 
+
 //Add method isWalk/isFly/isSing/isSwim to define if the animal is able to walk/fly/sing/swim
 public interface Animal {
 	public void walk();
@@ -504,6 +520,7 @@ BONUS
 If you still have time left, please consider the following: 
 1. Can you add a second language (if you know a language other than English) Use the rooster as a PoC for demonstrating this. For example, 
 this is how the Rooster sounds differently depending on language. Please add the rooster sound in your native tongue.
+
 //Rooster
 public class Rooster extends Chicken {
 	
@@ -564,6 +581,7 @@ public class Solution {
 }
 
 2. Can you design a RESTful API for querying these animals ?
+
 Request : http://localhost:8080/testing/searchAnimals/?animal=bird
 Response : return one json oject.
 			{
